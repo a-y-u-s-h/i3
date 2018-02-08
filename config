@@ -167,7 +167,7 @@ floating_modifier $mod
 ################################################################################
 
 # locker
-set $locker "/usr/bin/sxlock -u 'a-y-u-s-h'"
+set $locker "/usr/bin/sxlock -u 'a-y-u-s-h' -f '-*-dejavu sans mono-medium-r-normal--*-100-*-*-*-*-iso10646-1'"
 
 # lock screen with $mod4+l
 bindsym $mod4+l exec --no-startup-id $locker
