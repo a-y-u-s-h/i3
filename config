@@ -165,7 +165,7 @@ floating_modifier $mod
 ################################################################################
 # Configure screen locking
 ################################################################################
-.
+
 # locker
 set $locker "/usr/bin/sxlock -u 'a-y-u-s-h' -f '-*-fira sans medium-r-normal--*-150-*-*-*-*-iso10646-1'"
 
