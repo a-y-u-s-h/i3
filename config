@@ -165,9 +165,9 @@ floating_modifier $mod
 ################################################################################
 # Configure screen locking
 ################################################################################
-
+.
 # locker
-set $locker "/usr/bin/sxlock -u 'a-y-u-s-h' -f '-*-dejavu medium mono-medium-r-normal--*-100-*-*-*-*-iso10646-1'"
+set $locker "/usr/bin/sxlock -u 'a-y-u-s-h' -f '-*-fira sans medium-r-normal--*-150-*-*-*-*-iso10646-1'"
 
 # lock screen with $mod4+l
 bindsym $mod4+l exec --no-startup-id $locker
@@ -184,8 +184,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # playback controls
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
