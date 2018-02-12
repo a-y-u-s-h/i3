@@ -167,7 +167,7 @@ floating_modifier $mod
 ################################################################################
 
 # locker
-set $locker "/usr/bin/sxlock -u 'a-y-u-s-h' -f '-*-fira sans medium-r-normal--*-150-*-*-*-*-iso10646-1'"
+set $locker "/usr/bin/sxlock -u 'a-y-u-s-h'
 
 # lock screen with $mod4+l
 bindsym $mod4+l exec --no-startup-id $locker
@@ -326,3 +326,13 @@ bindsym $mod+Shift+minus move scratchpad
 
 # show the first scratchpad window
 bindsym $mod+minus scratchpad show
+
+################################################################################
+# Screenshots
+###############################################################################
+
+# take a screenshot of a screen region and copy it to a clipboard
+bindsym --release Shift+Print exec "bash ~/.scripts/screenshot.sh -s /home/a-y-u-s-h/Pictures/Screenshots/"
+
+# take a screenshot of a whole window and copy it to a clipboard
+bindsym --release Print exec "bash ~/.scripts/screenshot.sh /home/a-y-u-s-h/Pictures/Screenshots/"
