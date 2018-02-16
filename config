@@ -24,7 +24,7 @@ set $c_sixth    #888888
 bindsym $mod+Return exec i3-sensible-terminal
 
 # start dmenu-desktop
-bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
+bindsym Mod1+space exec --no-startup-id j4-dmenu-desktop\
     --dmenu="dmenu -i -p 'App:' -f\
         -nb '"$c_first"'\
         -nf '"$c_second"'\
