@@ -34,20 +34,6 @@ bindsym $mod+Return exec $terminal
 # start a terminal
 bindsym $mod+Shift+Return exec cool-retro-term
 
-# start dmenu-desktop
-bindsym $mod+d exec --no-startup-id rofi -dmenu
-
-#j4-dmenu-desktop\
- #   --dmenu="dmenu -i -b -p 'App:' -f\
-  #      -nb '"$c_first"'\
-   #     -nf '"$c_second"'\
-    #    -sb '"$c_third"'\
-     #   -fn 'Source Code Pro-12'"\
-    #--usage-log=$HOME"/.dmenu_usage.log"
-
-# start tilda
-exec_always --no-startup-id tilda
-
 # start mpd
 exec_always --no-startup-id mpd
 
@@ -67,7 +53,24 @@ bindsym $mod+2 exec kitty nvim
 # Bind a key for web-browser
 bindsym $mod+Tab exec $web_browser
 
+# rofi to launch
+bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
+    --dmenu="rofi -i -p 'App' -show run -dmenu \
+        -lines 5 \
+        -show run \
+        -no-lazy-grab \
+        -matching fuzzy \
+        -padding 10 \
+        -scroll-method 1" \
+    --term="i3-sensible-terminal"\
+    --usage-log=$HOME"/.dmenu_usage.log"
 
+# Screenshot
+set $screenshot --no-startup-id gnome-screenshot
+set $screenshot-media --no-startup-id gnome-screenshot -i
+
+bindsym Print exec $screenshot
+bindsym Shift+Print exec $screenshot-media
 
 
 ################################################################################
