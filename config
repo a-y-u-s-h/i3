@@ -332,7 +332,7 @@ bindsym $mod+minus scratchpad show
 ###############################################################################
 
 # take a screenshot of a screen region and copy it to a clipboard
-bindsym --release Shift+Print exec "bash ~/.scripts/screenshot.sh -s /home/a-y-u-s-h/Pictures/Screenshots/"
+bindsym --release Shift+Print exec "bash ~/.config/i3/scripts/screenshot.sh -s /home/a-y-u-s-h/Pictures/Screenshots/"
 
 # take a screenshot of a whole window and copy it to a clipboard
-bindsym --release Print exec "bash ~/.scripts/screenshot.sh /home/a-y-u-s-h/Pictures/Screenshots/"
+bindsym --release Print exec "bash ~/.config/i3/scripts/screenshot.sh /home/a-y-u-s-h/Pictures/Screenshots/"

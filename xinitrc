@@ -60,7 +60,12 @@ if [ -f /usr/bin/redshift ]; then
     redshift &
 fi
 
-# start i3 and keep it running
-if [ -f /usr/bin/i3 ]; then
-    exec i3
-fi
+# Here i3 is kept as default
+session=${1:-i3}
+
+case $session in
+    i3|i3wm           ) exec i3;;
+    awesome|awesomewm        ) exec awesome;;
+    # No known session, try to run it as command
+    *                 ) exec $1;;
+esac
