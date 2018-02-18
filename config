@@ -23,6 +23,10 @@ set $c_sixth    #888888
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# start a terminal
+bindsym $mod+Shift+Return exec cool-retro-term
+
+
 # start dmenu-desktop
 bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
     --dmenu="dmenu -i -p 'App:' -f\
@@ -95,8 +99,8 @@ font pango:Ubuntu Regular 12
 
 # name the workspaces
 set $w1 1:
-set $w2 2:
-set $w3 3:
+set $w2 2:
+set $w3 3:
 set $w4 4:
 set $w5 5:
 set $w6 6:
