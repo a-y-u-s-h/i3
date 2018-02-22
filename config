@@ -6,6 +6,9 @@ set $mod4 Ctrl+Mod1
 # set the config directory
 set $config_dir ~/.config/i3
 
+# set favourite terminal
+set $terminal kitty
+
 # set the status bar
 set $status_cmd "i3status --config ~/.config/i3/i3status.conf"
 
@@ -28,7 +31,6 @@ bindsym $mod+Return exec $terminal
 
 # start a terminal
 bindsym $mod+Shift+Return exec cool-retro-term
-
 
 # start dmenu-desktop
 bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
@@ -216,6 +218,11 @@ client.placeholder      $c_fourth $c_first  $c_second $c_first  $c_second
 
 # application specific styles for windows
 for_window [class="Spotify"] border pixel 0
+for_window [class="^.*"] border pixel 0
+for_window [class="Gnome-terminal"] border pixel 10
+for_window [class="kitty"] border pixel 10
+for_window [title="TrueCrypt|Google Keep"] floating enable
+for_window [window_role="pop-up"] floating enable,move absolute center
 
 
 
@@ -274,8 +281,6 @@ bar {
 
         # dont show the numbers of the workspaces
         strip_workspace_numbers yes
-
-        mode hide
 }
 
 
