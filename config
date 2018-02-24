@@ -274,6 +274,8 @@ bar {
 
         # dont show the numbers of the workspaces
         strip_workspace_numbers yes
+
+        mode hide
 }
 
 
