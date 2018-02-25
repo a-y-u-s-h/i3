@@ -9,6 +9,9 @@ set $config_dir ~/.config/i3
 # set the status bar
 set $status_cmd "i3status --config ~/.config/i3/i3status.conf"
 
+# set fav terminal
+set $terminal kitty
+
 # set color scheme for theme
 set $c_first    #000000
 set $c_first_a  #000000aa
@@ -21,7 +24,7 @@ set $c_sixth    #888888
 
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $terminal
 
 # start a terminal
 bindsym $mod+Shift+Return exec cool-retro-term
@@ -34,7 +37,6 @@ bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
         -nf '"$c_second"'\
         -sb '"$c_third"'\
         -fn 'SanFranciscoText Bold-10'"\
-    --term="i3-sensible-terminal"\
     --usage-log=$HOME"/.dmenu_usage.log"
 
 # start tilda
