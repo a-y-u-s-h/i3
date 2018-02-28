@@ -9,6 +9,9 @@ set $config_dir ~/.config/i3
 # set favourite terminal
 set $terminal kitty
 
+# set favourite browser
+set $web_browser google-chrome-stable
+
 # set the status bar
 set $status_cmd "i3status --config ~/.config/i3/i3status.conf"
 
@@ -44,8 +47,16 @@ bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
 # start tilda
 exec_always --no-startup-id tilda
 
-# start Emacs
-bindsym $mod+Tab exec emacs
+# Bind a key for Emacs GUI
+bindsym $mod+1 exec emacs
+
+# Bind a key for Sublime Text 3 
+bindsym $mod+2 exec subl3
+
+# Bind a key for web-browser
+bindsym $mod+Tab exec $web_browser
+
+
 
 
 ################################################################################
@@ -116,16 +127,16 @@ set $w9 9:
 set $w10 10:
 
 # switch to workspace
-bindsym $mod+KP_End	   workspace $w1
-bindsym $mod+KP_Down	   workspace $w2
-bindsym $mod+KP_Next	   workspace $w3
-bindsym $mod+KP_Left 	   workspace $w4
-bindsym $mod+KP_Begin 	   workspace $w5
-bindsym $mod+KP_Right 	   workspace $w6
-bindsym $mod+KP_Home 	   workspace $w7
-bindsym $mod+KP_Up 	   workspace $w8
-bindsym $mod+KP_Prior	   workspace $w9
-bindsym $mod+KP_Insert	   workspace $w10
+bindcode $mod+87	 workspace $w1
+bindcode $mod+88 	 workspace $w2
+bindcode $mod+89	 workspace $w3
+bindcode $mod+83	 workspace $w4
+bindcode $mod+84	 workspace $w5
+bindcode $mod+85	 workspace $w6
+bindcode $mod+79	 workspace $w7
+bindcode $mod+80	 workspace $w8
+bindcode $mod+81	 workspace $w9
+bindcode $mod+90	 workspace $w0
 
 # move focused container to workspace
 bindcode $mod+Shift+87 move container to workspace $w1
