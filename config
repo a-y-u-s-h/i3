@@ -17,7 +17,7 @@ set $terminal kitty
 
 # set color scheme for theme
 set $c_first    #000000
-set $c_first_a  #000000aa
+set $c_first_a  #000000bb
 set $c_second   #ffffff
 set $c_second_a #ffffffff
 set $c_third    #333335
@@ -93,7 +93,7 @@ bindsym $mod+Shift+q kill
 popup_during_fullscreen smart
 
 # set the font used by the windows
-font pango:Ubuntu Regular 12
+font pango:Source Sans Pro 11
 
 
 
@@ -138,8 +138,8 @@ bindsym $mod+Shift+9 move container to workspace $w9
 bindsym $mod+Shift+0 move container to workspace $w10
 
 # switch to next and prev workspaces
-bindsym $mod+Tab        workspace next
-bindsym $mod+Shift+Tab  workspace prev
+bindsym $mod+period        workspace next
+bindsym $mod+comma 	   workspace prev
 
 
 
@@ -219,8 +219,8 @@ client.placeholder      $c_fourth $c_first  $c_second $c_first  $c_second
 # application specific styles for windows
 for_window [class="Spotify"] border pixel 0
 for_window [class="^.*"] border pixel 0
-for_window [class="Gnome-terminal"] border pixel 10
-for_window [class="kitty"] border pixel 10
+#for_window [class="Gnome-terminal"] border pixel 10
+for_window [class="Kitty"] border pixel 10
 for_window [title="TrueCrypt|Google Keep"] floating enable
 for_window [window_role="pop-up"] floating enable,move absolute center
 
