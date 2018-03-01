@@ -36,7 +36,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+Return exec cool-retro-term
 
 # start dmenu-desktop
-bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
+bindsym Ctrl+d exec --no-startup-id j4-dmenu-desktop\
     --dmenu="dmenu -i -p 'App:' -f\
         -nb '"$c_first"'\
         -nf '"$c_second"'\
@@ -47,11 +47,21 @@ bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
 # start tilda
 exec_always --no-startup-id tilda
 
+# start mpd
+exec_always --no-startup-id mpd
+
 # Bind a key for Emacs GUI
-bindsym $mod+1 exec emacs
+bindsym $mod+Shift+1 exec emacs
+
+# Bind a key for Emacs Terminal : Kitty
+bindsym $mod+1 exec kitty emacs -nw
+
 
 # Bind a key for Sublime Text 3 
-bindsym $mod+2 exec subl3
+bindsym $mod+3 exec "subl3 -n"
+
+# Bind a key for Nvim in Kitty
+bindsym $mod+2 exec kitty nvim
 
 # Bind a key for web-browser
 bindsym $mod+Tab exec $web_browser
