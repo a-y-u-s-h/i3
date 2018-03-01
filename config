@@ -36,7 +36,7 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+Return exec cool-retro-term
 
 # start dmenu-desktop
-bindsym Ctrl+d exec --no-startup-id j4-dmenu-desktop\
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop\
     --dmenu="dmenu -i -p 'App:' -f\
         -nb '"$c_first"'\
         -nf '"$c_second"'\
