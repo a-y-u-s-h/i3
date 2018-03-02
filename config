@@ -36,11 +36,11 @@ bindsym $mod+Shift+Return exec cool-retro-term
 
 # start dmenu-desktop
 bindsym $mod+d exec --no-startup-id j4-dmenu-desktop\
-    --dmenu="dmenu -i -p 'App:' -f\
+    --dmenu="dmenu -i -b -p 'App:' -f\
         -nb '"$c_first"'\
         -nf '"$c_second"'\
         -sb '"$c_third"'\
-        -fn 'SanFranciscoText Bold-10'"\
+        -fn 'Source Code Pro-12'"\
     --usage-log=$HOME"/.dmenu_usage.log"
 
 # start tilda
