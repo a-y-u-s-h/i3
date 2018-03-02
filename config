@@ -35,13 +35,15 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+Shift+Return exec cool-retro-term
 
 # start dmenu-desktop
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop\
-    --dmenu="dmenu -i -b -p 'App:' -f\
-        -nb '"$c_first"'\
-        -nf '"$c_second"'\
-        -sb '"$c_third"'\
-        -fn 'Source Code Pro-12'"\
-    --usage-log=$HOME"/.dmenu_usage.log"
+bindsym $mod+d exec --no-startup-id rofi -dmenu
+
+#j4-dmenu-desktop\
+ #   --dmenu="dmenu -i -b -p 'App:' -f\
+  #      -nb '"$c_first"'\
+   #     -nf '"$c_second"'\
+    #    -sb '"$c_third"'\
+     #   -fn 'Source Code Pro-12'"\
+    #--usage-log=$HOME"/.dmenu_usage.log"
 
 # start tilda
 exec_always --no-startup-id tilda
@@ -116,8 +118,6 @@ popup_during_fullscreen smart
 
 # set the font used by the windows
 font pango:Source Sans Pro 12
-
-
 
 ################################################################################
 # Configure workspaces
@@ -202,8 +202,6 @@ set $locker "/usr/bin/sxlock -u 'a-y-u-s-h'
 # lock screen with $mod4+l
 bindsym $mod4+l exec --no-startup-id $locker
 
-
-
 ################################################################################
 # Make multimedia keys useful
 ################################################################################
@@ -221,7 +219,6 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-
 
 
 ################################################################################
@@ -249,8 +246,13 @@ for_window [window_role="pop-up"] floating enable,move absolute center
 
 
 ################################################################################
-# Configure the status ba
+# Configure the status bar
 ################################################################################
+
+# Uncomment if you want to use polybar
+#exec_always --no-startup-id killall polybar; polybar top &
+#exec_always --no-startup-id killall polybar; polybar bottom &
+
 
 # toggle hiding and showing bar
 bindsym $mod+m bar mode toggle
@@ -267,7 +269,7 @@ bar {
         #i3bar_command i3bar -t
 
         # define dock behavior in hidden state
-        hidden_state hide
+#        hidden_state hide
         modifier $mod
 
         # place the bar on the top
@@ -304,7 +306,6 @@ bar {
         # dont show the numbers of the workspaces
         strip_workspace_numbers yes
 }
-
 
 
 ################################################################################
