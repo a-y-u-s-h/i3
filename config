@@ -54,7 +54,7 @@ bindsym $mod+2 exec kitty nvim
 bindsym $mod+Tab exec $web_browser
 
 # rofi to launch
-bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop\
     --dmenu="rofi -i -p 'App' -show run -dmenu \
         -lines 5 \
         -show run \
