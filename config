@@ -16,6 +16,7 @@ set $status_cmd "i3status --config ~/.config/i3/i3status.conf"
 
 # set fav terminal
 set $terminal kitty
+set $terminal_alternate alacritty
 
 # set color scheme for theme
 set $c_first    #000000
@@ -32,7 +33,7 @@ set $c_sixth    #888888
 bindsym $mod+Return exec $terminal
 
 # start a terminal
-bindsym $mod+Shift+Return exec cool-retro-term
+bindsym $mod+Shift+Return exec $terminal_alternate
 
 # start mpd
 exec_always --no-startup-id mpd
