@@ -5,9 +5,6 @@ set $mod4 Ctrl+Mod1
 # set the config directory
 set $config_dir ~/.config/i3
 
-# set favourite terminal
-set $terminal kitty
-
 # set favourite browser
 set $web_browser google-chrome-stable
 
@@ -34,6 +31,9 @@ bindsym $mod+Return exec $terminal
 
 # start a terminal
 bindsym $mod+Shift+Return exec $terminal_alternate
+
+# start ranger in good terminal
+bindsym $mod+Ctrl+Return exec $terminal ranger
 
 # start mpd
 exec_always --no-startup-id mpd
