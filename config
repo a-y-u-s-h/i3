@@ -32,7 +32,7 @@ bindsym $mod+Return exec $terminal
 # start a terminal
 bindsym $mod+Shift+Return exec $terminal_alternate
 
-# start ranger in good terminal
+# start ranger in alacritty
 bindsym $mod+Ctrl+Return exec $terminal ranger
 
 # start mpd
