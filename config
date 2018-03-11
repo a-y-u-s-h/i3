@@ -38,6 +38,9 @@ bindsym $mod+Ctrl+Return exec $terminal ranger
 # start mpd
 exec_always --no-startup-id mpd
 
+bindsym $mod+0 exec $terminal_alternate -e ncmpcpp
+
+
 # Bind a key for Emacs GUI
 bindsym $mod+Shift+1 exec emacs
 
