@@ -76,6 +76,15 @@ set $screenshot-media --no-startup-id gnome-screenshot -i
 bindsym Print exec $screenshot
 bindsym Shift+Print exec $screenshot-media
 
+################################################################################
+# Configure Music Player Daemon Keys
+################################################################################
+
+#bindsym XF86AudioPrev exec mpc prev
+#bindsym XF86AudioNext exec mpc next
+#bindsym XF86AudioPlay exec mpc_toggle
+#bindsym XF86AudioMute exec my_mute
+
 
 ################################################################################
 # Configure navigation control
@@ -226,6 +235,10 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+bindsym $mod+Ctrl+P exec --no-startup-id mpc play-pause
+bindsym $mod4+Right exec --no-startup-id mpc next
+bindsym $mod4+Left exec --no-startup-id mpc prev
 
 
 ################################################################################
