@@ -35,12 +35,6 @@ bindsym $mod+Shift+Return exec $terminal_alternate
 # start ranger in alacritty
 bindsym $mod+Ctrl+Return exec $terminal ranger
 
-# start mpd
-exec_always --no-startup-id mpd
-
-bindsym $mod+0 exec $terminal_alternate -e ncmpcpp
-
-
 # Bind a key for Emacs GUI
 bindsym $mod+Shift+1 exec emacs
 
@@ -80,11 +74,15 @@ bindsym Shift+Print exec $screenshot-media
 # Configure Music Player Daemon Keys
 ################################################################################
 
-#bindsym XF86AudioPrev exec mpc prev
-#bindsym XF86AudioNext exec mpc next
-#bindsym XF86AudioPlay exec mpc_toggle
-#bindsym XF86AudioMute exec my_mute
+# start mpd
+exec_always --no-startup-id mpd
+bindcode $mod4+90 exec $terminal_alternate -e ncmpcpp
 
+bindsym $mod4+Up exec mpc toggle
+bindsym $mod4+Down exec --no-startup-id (pkill mpd && sleep 0.2 && mpd)
+
+bindsym $mod4+Right exec --no-startup-id mpc next
+bindsym $mod4+Left exec --no-startup-id mpc prev
 
 ################################################################################
 # Configure navigation control
@@ -161,7 +159,7 @@ bindcode $mod+85	 workspace $w6
 bindcode $mod+79	 workspace $w7
 bindcode $mod+80	 workspace $w8
 bindcode $mod+81	 workspace $w9
-bindcode $mod+90	 workspace $w0
+bindcode $mod+90	 workspace $w10
 
 # move focused container to workspace
 bindcode $mod+Shift+87 move container to workspace $w1
@@ -173,7 +171,7 @@ bindcode $mod+Shift+85 move container to workspace $w6
 bindcode $mod+Shift+79 move container to workspace $w7
 bindcode $mod+Shift+80 move container to workspace $w8
 bindcode $mod+Shift+81 move container to workspace $w9
-bindcode $mod+Shift+90 move container to workspace $w0
+bindcode $mod+Shift+90 move container to workspace $w10
 
 # switch to next and prev workspaces
 bindsym $mod+Ctrl+Right	 workspace next
@@ -235,10 +233,6 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-
-bindsym $mod+Ctrl+P exec --no-startup-id mpc play-pause
-bindsym $mod4+Right exec --no-startup-id mpc next
-bindsym $mod4+Left exec --no-startup-id mpc prev
 
 
 ################################################################################
