@@ -76,10 +76,12 @@ bindsym Shift+Print exec $screenshot-media
 
 # start mpd
 exec_always --no-startup-id mpd
-bindcode $mod4+90 exec $terminal_alternate -e ncmpcpp
+bindsym $mod+0 exec $terminal_alternate -e ncmpcpp
 
-bindsym $mod4+Up exec mpc toggle
-bindsym $mod4+Down exec --no-startup-id (pkill mpd && sleep 0.2 && mpd)
+bindsym $mod4+Up exec --no-startup-id mpc toggle
+bindcode $mod4+91 exec --no-startup-id (pkill mpd)
+bindcode $mod4+90 exec --no-startup-id (mpd)
+bindsym $mod4+Down  exec --no-startup-id (pkill mpd && sleep 0.2 && mpd)
 
 bindsym $mod4+Right exec --no-startup-id mpc next
 bindsym $mod4+Left exec --no-startup-id mpc prev
