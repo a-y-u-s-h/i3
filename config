@@ -306,7 +306,7 @@ bar {
         tray_output primary
 
         # use a different font for the bar
-        font pango:Source Sans Pro 12
+        font pango:Roboto 10
 
         # use a custom separator symbol
         separator_symbol ":|:"
