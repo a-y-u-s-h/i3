@@ -52,7 +52,10 @@ bindsym $mod+2 exec kitty nvim
 bindsym $mod+Tab exec $web_browser
 
 # Start whatsapp desktop
-bindsym $mod+9 exec --no-startup-id whatsapp-web-desktop
+bindsym $mod+9 exec  whatsapp-web-desktop
+
+# Start instagram desktop
+bindsym $mod+8 exec ramme
 
 # Start nmtui-connect
 bindsym $mod+minus exec --no-startup-id kitty nmtui-connect
