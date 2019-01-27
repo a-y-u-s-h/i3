@@ -55,7 +55,7 @@ bindsym $mod+Tab exec $web_browser
 bindsym $mod+9 exec  whatsapp-web-desktop
 
 # Start instagram desktop
-bindsym $mod+8 exec ramme
+bindsym $mod+i exec ramme
 
 # Start nmtui-connect
 bindsym $mod+minus exec --no-startup-id kitty nmtui-connect
@@ -387,3 +387,17 @@ bindsym --release Shift+Print exec "bash ~/.config/i3/scripts/screenshot.sh -s /
 
 # take a screenshot of a whole window and copy it to a clipboard
 bindsym --release Print exec "bash ~/.config/i3/scripts/screenshot.sh /home/a-y-u-s-h/Pictures/Screenshots/"
+
+################################################################################
+# Monitors
+###############################################################################
+
+exec_always xrandr --output HDMI-1 --mode 1366x768 --pos 0x0 --rotate normal --output eDP-1 --primary --mode 1366x768 --pos 1366x0 --rotate normal
+
+################################################################################
+# Default Applications
+###############################################################################
+
+
+exec --no-startup-id i3-msg workspace $w5 && $terminal_alternate -e ncmpcpp
+exec --no-startup-id i3-msg workspace $w5 && $terminal_alternate -e cava
