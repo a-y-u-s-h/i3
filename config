@@ -10,6 +10,7 @@ set $web_browser google-chrome-stable
 
 # set the status bar
 set $status_cmd "i3status --config ~/.config/i3/i3status.conf"
+# set $status_cmd "i3blocks -c ~/.config/i3/i3blocks.conf"
 
 # set fav terminal
 set $terminal kitty
@@ -145,7 +146,7 @@ bindsym $mod+Shift+q kill
 popup_during_fullscreen smart
 
 # set the font used by the windows
-font pango:Source Sans Pro 12
+font pango:System San Francisco Display Regular 10
 
 ################################################################################
 # Configure workspaces
@@ -157,11 +158,11 @@ set $w2 2:
 set $w3 3:
 set $w4 4:
 set $w5 5:
-set $w6 6:
-set $w7 7:
-set $w8 8:
-set $w9 9:
-set $w10 10:
+set $w6 6:
+set $w7 7:
+set $w8 8:
+set $w9 9:
+set $w10 10:
 
 # switch to workspace
 bindcode $mod+87	 workspace $w1
@@ -318,7 +319,7 @@ bar {
         tray_output primary
 
         # use a different font for the bar
-        font pango:Roboto 10
+        font pango:Roboto 9
 
         # use a custom separator symbol
         separator_symbol ":|:"
